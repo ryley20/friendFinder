@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Friend Finder</title>
-  <!-- CSS & JS -->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- Font Awesome -->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <!-- Chosen: inspect demo found below links-->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 </head>
@@ -148,7 +148,7 @@
 
     <br>
     <br>
-    <!-- Submit Button -->
+
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
       <i class="fa fa-check-circle" aria-hidden="true"></i>
      Submit
@@ -161,12 +161,10 @@
     </footer>
   </div>
 
-  <!-- Modal??? copied from demo, is this what shows the results -->
-  <!-- don't know yet -->
   
   <div id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-      <!-- Modal content-->
+
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
@@ -201,8 +199,7 @@
           })
           return isValid;
         }
-        
-        //if data is valid then will post it
+    
         if(validate()){
             var score = [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(), $("#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(), $("#q9").val().trim(), $("#q10").val().trim()];
             var newFriend = {
@@ -220,15 +217,10 @@
                 alert("Info added!");
                 $("#match-name").text(res.name);
                 $("#match-img").attr("src", res.photo);
-                $("#results-modal").modal("toggle"); //this apparently turns on the modal
+                $("#results-modal").modal("toggle");
               }
             })
-/*            $.post("/api/friends", newFriend, function(res){
-                console.log(res);
-                alert("Info added!");
-                $("#match-name").text(res.name);
-                $("#match-img").attr("src", res.photo);
-            })*/
+
           }
           else{
             alert("Form not correctly filled out!");
