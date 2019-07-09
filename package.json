@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/ryley20/friendFinder#readme",
   "dependencies": {
-    "mysql": "^2.17.1"
+    "mysql": "^2.17.1",
+    "path": "^0.12.7",
+    "require": "^2.4.20"
   },
   "devDependencies": {}
 }
